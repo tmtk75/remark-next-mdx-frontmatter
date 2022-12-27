@@ -16,7 +16,7 @@ const withMDX = withMDXFm({
   extension: /\.mdx?$/,
   options: {
     remarkPlugins: [
-      [remarkFm, { path: "../components/Post" /* default path to layout component */ }]
+      [remarkFm, { layoutPath: "../components/Post" /* default path to layout component */ }]
     ]
   },
 });
@@ -55,4 +55,11 @@ author: tmtk75
 ---
 # Hello World
 something...
+```
+
+You can give a `layoutPath` to each page in its frontmatter.
+```mdx
+---
+title: a page
+layoutPath: ../../components/Page
 ```
