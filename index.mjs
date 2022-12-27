@@ -6,11 +6,11 @@ import matter from "gray-matter";
 //
 
 /**
- * @param {{path: string, attrName?: string}} props
+ * @param {{layoutPath: string, attrName?: string}} props
  */
 export default function remarkFrontmatter(props) {
   // const importPath = "../components/Post";
-  const importPath = props.path;
+  const layoutPath = props.layoutPath;
   const attrName = props.attrName ?? "frontmatter";
 
   /**
@@ -34,7 +34,7 @@ export default function remarkFrontmatter(props) {
     const fmprops = Object.keys(data).map((key) => toProperty(key, data[key]));
 
     tree.children = [
-      mdxjsEsmImportDeclaration(importPath),
+      mdxjsEsmImportDeclaration(data["layoutPath"] ?? layoutPath),
       mdxJsxFlowElementMdxFrontMatterProvider(attrName, fmprops, tree.children),
     ];
   };

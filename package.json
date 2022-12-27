@@ -1,6 +1,6 @@
 {
   "name": "remark-next-mdx-frontmatter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./index.mjs",
   "license": "MIT",
   "dependencies": {
