@@ -1,6 +1,8 @@
 # README
 This module allows you to use `Frontmatter` with [`@next/mdx`](https://nextjs.org/docs/advanced-features/using-mdx#nextmdx) which doesn't officially support frontmatter.
 
+This plugin only supports MDX v2.
+
 To install
 ```
 $ yarn add remark-next-mdx-frontmatter
